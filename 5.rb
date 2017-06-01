@@ -3,9 +3,9 @@ class T
  	method1()
  end
 
- def method1
- 	# puts "prueba"
- 	srand()
+ def self.method1
+ 	# numero aleatorio entre 1 y 100
+ 	rand(1..100)
  end
 
 end
@@ -14,9 +14,8 @@ end
 class Q < T
 	@instanceVar
 	def initialize()
-		@instanceVar=super
-
-
+		# Se guarda en una variable de instancia @instanceVar
+		@instanceVar=T.method1
 	end
 end
 
